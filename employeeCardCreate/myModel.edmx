@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EmployeeCardModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CompanyProperties">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="RepresendativeName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContractorProperties">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="ContractorName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="RepresendativeName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+          <Property Name="BirthDate" Type="datetime" Nullable="false" />
+          <Property Name="BirthPlace" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NationalId" Type="nvarchar" MaxLength="50" />
+          <Property Name="NationalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="PassportId" Type="nvarchar" MaxLength="50" />
+          <Property Name="Region" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="JobSituation" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LetterId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AnalArea" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstArea" Type="varchar(max)" />
+          <Property Name="SecondArea" Type="varchar(max)" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+          <Property Name="ExpireDate" Type="datetime" Nullable="false" />
+          <Property Name="SecondaryCard" Type="int" />
+          <Property Name="DateSecondaryCard" Type="datetime" />
+          <Property Name="LostCard" Type="nchar" MaxLength="10" />
+          <Property Name="TypeLostCard" Type="nvarchar" MaxLength="50" />
+          <Property Name="FindLostCardDate" Type="datetime" />
+          <Property Name="Image" Type="varbinary(max)" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CompanyResName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CompanyNum" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ContractorName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ContractorResName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ContarctorNum" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Print" Type="int" />
+          <Property Name="PrintDate" Type="datetime" />
+          <Property Name="is" Type="int" />
+          <Property Name="LostCardDate" Type="datetime" />
+          <Property Name="user" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="access" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EmployeeCardModelStoreContainer">
+          <EntitySet Name="CompanyProperties" EntityType="Self.CompanyProperties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ContractorProperties" EntityType="Self.ContractorProperties" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EmployeeCardModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EmployeeCardentities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CompanyProperties" EntityType="EmployeeCardModel.CompanyProperty" />
+          <EntitySet Name="ContractorProperties" EntityType="EmployeeCardModel.ContractorProperty" />
+          <EntitySet Name="Employees" EntityType="EmployeeCardModel.Employee" />
+          <EntitySet Name="users" EntityType="EmployeeCardModel.user" />
+        </EntityContainer>
+        <EntityType Name="CompanyProperty">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RepresendativeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ContractorProperty">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="ContractorName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RepresendativeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FatherName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BirthPlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NationalId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NationalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PassportId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="JobSituation" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LetterId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AnalArea" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FirstArea" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="SecondArea" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ExpireDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SecondaryCard" Type="Int32" />
+          <Property Name="DateSecondaryCard" Type="DateTime" Precision="3" />
+          <Property Name="LostCard" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TypeLostCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FindLostCardDate" Type="DateTime" Precision="3" />
+          <Property Name="Image" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="CompanyName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyResName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CompanyNum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractorName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContractorResName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ContarctorNum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Print" Type="Int32" />
+          <Property Name="PrintDate" Type="DateTime" Precision="3" />
+          <Property Name="is" Type="Int32" />
+          <Property Name="LostCardDate" Type="DateTime" Precision="3" />
+          <Property Name="user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="access" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EmployeeCardModelStoreContainer" CdmEntityContainer="EmployeeCardentities">
+          <EntitySetMapping Name="CompanyProperties">
+            <EntityTypeMapping TypeName="EmployeeCardModel.CompanyProperty">
+              <MappingFragment StoreEntitySet="CompanyProperties">
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="RepresendativeName" ColumnName="RepresendativeName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContractorProperties">
+            <EntityTypeMapping TypeName="EmployeeCardModel.ContractorProperty">
+              <MappingFragment StoreEntitySet="ContractorProperties">
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="RepresendativeName" ColumnName="RepresendativeName" />
+                <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="EmployeeCardModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="user" ColumnName="user" />
+                <ScalarProperty Name="LostCardDate" ColumnName="LostCardDate" />
+                <ScalarProperty Name="is" ColumnName="is" />
+                <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+                <ScalarProperty Name="Print" ColumnName="Print" />
+                <ScalarProperty Name="ContarctorNum" ColumnName="ContarctorNum" />
+                <ScalarProperty Name="ContractorResName" ColumnName="ContractorResName" />
+                <ScalarProperty Name="ContractorName" ColumnName="ContractorName" />
+                <ScalarProperty Name="CompanyNum" ColumnName="CompanyNum" />
+                <ScalarProperty Name="CompanyResName" ColumnName="CompanyResName" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="FindLostCardDate" ColumnName="FindLostCardDate" />
+                <ScalarProperty Name="TypeLostCard" ColumnName="TypeLostCard" />
+                <ScalarProperty Name="LostCard" ColumnName="LostCard" />
+                <ScalarProperty Name="DateSecondaryCard" ColumnName="DateSecondaryCard" />
+                <ScalarProperty Name="SecondaryCard" ColumnName="SecondaryCard" />
+                <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="SecondArea" ColumnName="SecondArea" />
+                <ScalarProperty Name="FirstArea" ColumnName="FirstArea" />
+                <ScalarProperty Name="AnalArea" ColumnName="AnalArea" />
+                <ScalarProperty Name="LetterId" ColumnName="LetterId" />
+                <ScalarProperty Name="JobSituation" ColumnName="JobSituation" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="PassportId" ColumnName="PassportId" />
+                <ScalarProperty Name="NationalCode" ColumnName="NationalCode" />
+                <ScalarProperty Name="NationalId" ColumnName="NationalId" />
+                <ScalarProperty Name="BirthPlace" ColumnName="BirthPlace" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="EmployeeCardModel.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="access" ColumnName="access" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="username" ColumnName="username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

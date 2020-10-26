@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F09443E3-3949-4CD3-90B0-B17B770D8390}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>employeeCardCreate</RootNamespace>
+    <AssemblyName>employeeCardCreate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>employeeCardCreate.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5A32247B583C94F4350E77092C082C5A31E698A8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>employeeCardCreate_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\..\..\Desktop\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Barcode">
+      <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\x64\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Core">
+      <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\x64\MessagingToolkit.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.MMS">
+      <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\x64\MessagingToolkit.MMS.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Pdu">
+      <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\x64\MessagingToolkit.Pdu.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\packages\MessagingToolkit.QRCode.1.3.0\lib\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.UI">
+      <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\x64\MessagingToolkit.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.Wap">
+      <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\x64\MessagingToolkit.Wap.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Unofficial.Microsoft.SQLServer.SMO.11.0.3000.0\lib\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes\AppSetting.cs" />
+    <Compile Include="classes\SqlHelper.cs" />
+    <Compile Include="forms\cardAgainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\cardAgainForm.Designer.cs">
+      <DependentUpon>cardAgainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ChoseRegionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ChoseRegionFrm.Designer.cs">
+      <DependentUpon>ChoseRegionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\closemainformdialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\closemainformdialog.Designer.cs">
+      <DependentUpon>closemainformdialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\contractorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\contractorForm.Designer.cs">
+      <DependentUpon>contractorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\companyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\companyForm.Designer.cs">
+      <DependentUpon>companyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyProperty.cs">
+      <DependentUpon>myModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContractorProperty.cs">
+      <DependentUpon>myModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="forms\dateFindLostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\dateFindLostForm.Designer.cs">
+      <DependentUpon>dateFindLostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>myModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="forms\finalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\finalReport.Designer.cs">
+      <DependentUpon>finalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ConnectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ConnectionForm.Designer.cs">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ImageEditing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ImageEditing.Designer.cs">
+      <DependentUpon>ImageEditing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\loadLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\loadLogo.Designer.cs">
+      <DependentUpon>loadLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\lostCardform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\lostCardform.Designer.cs">
+      <DependentUpon>lostCardform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\remove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\remove.designer.cs">
+      <DependentUpon>remove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="myModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="myModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="forms\newCard2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\newCard2.Designer.cs">
+      <DependentUpon>newCard2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\newCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\newCard.Designer.cs">
+      <DependentUpon>newCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\pass.Designer.cs">
+      <DependentUpon>pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\printSecond.cs" />
+    <Compile Include="classes\printAll.cs" />
+    <Compile Include="classes\print.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="forms\searchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\searchFrm.Designer.cs">
+      <DependentUpon>searchFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\secondCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\secondCardForm.Designer.cs">
+      <DependentUpon>secondCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\startForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\startForm.Designer.cs">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>myModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="forms\userAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\userAccounts.Designer.cs">
+      <DependentUpon>userAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="forms\cardAgainForm.resx">
+      <DependentUpon>cardAgainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ChoseRegionFrm.resx">
+      <DependentUpon>ChoseRegionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\closemainformdialog.resx">
+      <DependentUpon>closemainformdialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\contractorForm.resx">
+      <DependentUpon>contractorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\companyForm.resx">
+      <DependentUpon>companyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\dateFindLostForm.resx">
+      <DependentUpon>dateFindLostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\finalReport.resx">
+      <DependentUpon>finalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ConnectionForm.resx">
+      <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ImageEditing.resx">
+      <DependentUpon>ImageEditing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\loadLogo.resx">
+      <DependentUpon>loadLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\lostCardform.resx">
+      <DependentUpon>lostCardform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\newCard2.resx">
+      <DependentUpon>newCard2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\newCard.resx">
+      <DependentUpon>newCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\pass.resx">
+      <DependentUpon>pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\remove.resx">
+      <DependentUpon>remove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="forms\searchFrm.resx">
+      <DependentUpon>searchFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\secondCardForm.resx">
+      <DependentUpon>secondCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\startForm.resx">
+      <DependentUpon>startForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\userAccounts.resx">
+      <DependentUpon>userAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="myModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>myModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="employeeCardCreate_TemporaryKey.pfx" />
+    <None Include="myModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>myModel.edmx</DependentUpon>
+      <LastGenOutput>myModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="myModel.edmx.diagram">
+      <DependentUpon>myModel.edmx</DependentUpon>
+    </None>
+    <None Include="myModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>myModel.edmx</DependentUpon>
+      <LastGenOutput>myModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closeP.tif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <Content Include="myModel.edmx.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
