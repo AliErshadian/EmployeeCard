@@ -103,6 +103,10 @@
       <Private>True</Private>
       <HintPath>..\packages\Unofficial.Microsoft.SQLServer.SMO.11.0.3000.0\lib\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
     </Reference>
+    <Reference Include="Neodynamic.SDK.ImageDraw, Version=3.0.2000.0, Culture=neutral, PublicKeyToken=49ea6b0547247dc5, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\ali\Downloads\Compressed\ImageDrawBusinessCardGenWindowsAppCS\ImageDrawBusinessCardGenWindowsAppCS\bin\Debug\Neodynamic.SDK.ImageDraw.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\MessagingToolkit.1.7.5.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -188,6 +192,12 @@
     </Compile>
     <Compile Include="forms\ConnectionForm.Designer.cs">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\ImageEditing.cs">
       <SubType>Form</SubType>
@@ -308,6 +318,9 @@
     <EmbeddedResource Include="forms\ConnectionForm.resx">
       <DependentUpon>ConnectionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\ImageEditing.resx">
       <DependentUpon>ImageEditing.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +430,8 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="myModel.edmx.sql" />
+    <None Include="Resources\title.gif" />
+    <None Include="Resources\title.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

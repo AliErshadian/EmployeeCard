@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Collections.Generic;
 
+
 namespace employeeCardCreate
 {
     public partial class StartForm : Form
@@ -839,7 +840,8 @@ namespace employeeCardCreate
 
         private void smsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Form1 frm = new Form1();
+            frm.Show();
         }
 
         

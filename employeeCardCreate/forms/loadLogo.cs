@@ -28,7 +28,8 @@ namespace employeeCardCreate
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.Hide();
-            ConnectionForm form = new ConnectionForm();
+            //ConnectionForm form = new connectionform();
+            pass form = new pass();
             timer1.Stop();
             form.Show();
         }
